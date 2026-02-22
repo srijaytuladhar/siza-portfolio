@@ -26,7 +26,8 @@ html {
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+  overflow-x: clip;
+  /* clip prevents horizontal scroll without breaking sticky positioning */
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-retro);
@@ -213,12 +214,37 @@ body {
     border-color: var(--retro-green);
   }
 }
+
 @keyframes glitch-scroll {
-  0% { transform: translate(0); filter: none; opacity: 1; }
-  25% { transform: translate(-4px, 2px); filter: hue-rotate(90deg) brightness(1.5); opacity: 0.7; }
-  50% { transform: translate(4px, -2px); filter: hue-rotate(-90deg) contrast(2); opacity: 0.8; }
-  75% { transform: translate(-2px, -1px); filter: invert(0.2); opacity: 0.7; }
-  100% { transform: translate(0); filter: none; opacity: 1; }
+  0% {
+    transform: translate(0);
+    filter: none;
+    opacity: 1;
+  }
+
+  25% {
+    transform: translate(-4px, 2px);
+    filter: hue-rotate(90deg) brightness(1.5);
+    opacity: 0.7;
+  }
+
+  50% {
+    transform: translate(4px, -2px);
+    filter: hue-rotate(-90deg) contrast(2);
+    opacity: 0.8;
+  }
+
+  75% {
+    transform: translate(-2px, -1px);
+    filter: invert(0.2);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translate(0);
+    filter: none;
+    opacity: 1;
+  }
 }
 
 .retro-scroll-glitch {
