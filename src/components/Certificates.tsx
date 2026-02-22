@@ -19,10 +19,14 @@ const Certificates = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {certs.map((cert, index) => (
                         <div key={index} className="group transition-transform duration-300 hover:-translate-y-4">
-                            <PixelBorder className="h-full flex flex-col items-center text-center bg-retro-black/60 group-hover:bg-retro-black shadow-lg">
-                                <Award size={48} className="mb-4 text-retro-yellow" />
-                                <h3 className="text-sm font-bold mb-2 group-hover:text-retro-green transition-colors">{cert.title}</h3>
-                                <p className="text-xs opacity-60 uppercase">{cert.issuer} • {cert.date}</p>
+                            <PixelBorder className="h-full flex flex-col items-center justify-center text-center bg-retro-black/60 group-hover:bg-retro-black shadow-lg p-6">
+                                <Award size={32} className="mb-4 text-retro-yellow flex-shrink-0" />
+                                <h3 className="text-xs md:text-sm font-bold mb-2 group-hover:text-retro-green transition-colors break-words w-full leading-tight">
+                                    {cert.title}
+                                </h3>
+                                <p className="text-[10px] md:text-xs opacity-60 uppercase break-words w-full">
+                                    {cert.issuer} • {cert.date}
+                                </p>
                             </PixelBorder>
                         </div>
                     ))}

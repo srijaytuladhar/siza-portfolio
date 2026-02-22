@@ -43,8 +43,8 @@ const Skills = () => {
                             </div>
                             <ul className="space-y-3">
                                 {group.skills.map((skill, sIndex) => (
-                                    <li key={sIndex} className="flex items-start gap-2 text-sm leading-tight">
-                                        <span className="text-retro-green mt-1">▶</span> {skill}
+                                    <li key={sIndex} className="flex items-start gap-2 text-sm leading-tight break-words">
+                                        <span className="text-retro-green mt-1 flex-shrink-0">▶</span> {skill}
                                     </li>
                                 ))}
                             </ul>
