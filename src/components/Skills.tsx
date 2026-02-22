@@ -29,25 +29,27 @@ const Skills = () => {
     return (
         <section id="skills" className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
-                <h2 className="text-3xl mb-12 text-center text-retro-yellow">&lt;SKILL_TREE /&gt;</h2>
+                <h2 className="text-xl sm:text-3xl mb-12 text-center text-retro-yellow">&lt;SKILL_TREE /&gt;</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {skillGroups.map((group, index) => (
                         <PixelBorder
                             key={index}
-                            className="bg-retro-black/50 hover:bg-retro-black transition-colors h-full"
+                            className="bg-retro-black/50 hover:bg-retro-black transition-colors h-full w-full"
                             variant={index % 3 === 0 ? 'green' : index % 3 === 1 ? 'yellow' : 'white'}
                         >
-                            <div className="flex items-center gap-4 mb-6">
-                                {group.icon}
-                                <h3 className="text-xl font-bold tracking-tight">{group.title}</h3>
+                            <div className="p-4 h-full">
+                                <div className="flex items-center gap-4 mb-6">
+                                    {group.icon}
+                                    <h3 className="text-lg md:text-xl font-bold tracking-tight">{group.title}</h3>
+                                </div>
+                                <ul className="space-y-3">
+                                    {group.skills.map((skill, sIndex) => (
+                                        <li key={sIndex} className="flex items-start gap-2 text-xs md:text-sm leading-tight break-words">
+                                            <span className="text-retro-green mt-1 flex-shrink-0">▶</span> {skill}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                            <ul className="space-y-3">
-                                {group.skills.map((skill, sIndex) => (
-                                    <li key={sIndex} className="flex items-start gap-2 text-sm leading-tight break-words">
-                                        <span className="text-retro-green mt-1 flex-shrink-0">▶</span> {skill}
-                                    </li>
-                                ))}
-                            </ul>
                         </PixelBorder>
                     ))}
                 </div>

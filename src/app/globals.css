@@ -17,12 +17,14 @@
   --font-retro: var(--font-retro);
 }
 
+html,
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-retro);
   image-rendering: pixelated;
-  overflow-x: hidden;
 }
 
 /* Custom Pixel Border Utilities */
@@ -176,6 +178,12 @@ body {
   animation:
     typing 3.5s steps(40, end),
     blink-caret .75s step-end infinite;
+}
+
+@media (max-width: 640px) {
+  .typewriter {
+    letter-spacing: .05em;
+  }
 }
 
 @keyframes typing {

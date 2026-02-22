@@ -48,7 +48,7 @@ const Experience = () => {
     return (
         <section id="experience" className="py-20 px-4">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-3xl mb-12 text-center text-retro-green">&lt;EXPERIENCE /&gt;</h2>
+                <h2 className="text-xl sm:text-3xl mb-12 text-center text-retro-green break-all">&lt;EXPERIENCE /&gt;</h2>
                 <div className="relative">
                     {/* Vertical Center Line (Desktop) / Left Line (Mobile) */}
                     <div className="absolute left-4 md:left-1/2 top-0 h-full border-l-4 border-retro-green/30 -translate-x-1/2" />
@@ -62,68 +62,58 @@ const Experience = () => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">
                                 {/* Left Side Item */}
-                                <div className={`ml-12 md:ml-0 ${index % 2 === 0 ? 'md:block' : 'md:invisible hidden md:block'}`}>
+                                <div className={`ml-8 md:ml-0 ${index % 2 === 0 ? 'block' : 'hidden md:block md:invisible'}`}>
                                     {index % 2 === 0 && (
                                         <div className="md:text-right">
-                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:min-w-[400px]">
-                                                <h3 className="text-lg font-bold text-retro-green mb-1">{quest.title}</h3>
-                                                <p className="text-sm text-retro-yellow mb-2">
-                                                    {quest.company} | {quest.period}
-                                                    {quest.location && <span className="block text-[10px] opacity-60 mt-1">{quest.location}</span>}
-                                                </p>
-                                                <ul className="text-[10px] md:text-sm opacity-80 space-y-2 list-none">
-                                                    {quest.points.map((point, pIndex) => (
-                                                        <li key={pIndex} className="flex gap-2">
-                                                            <span className="text-retro-green flex-shrink-0">▶</span>
-                                                            <span>{point}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:max-w-[500px]">
+                                                <div className="p-4 md:p-6">
+                                                    <h3 className="text-sm md:text-lg font-bold text-retro-green mb-1 break-all">{quest.title}</h3>
+                                                    <p className="text-[10px] md:text-sm text-retro-yellow mb-2 break-all flex flex-wrap gap-x-2">
+                                                        <span>{quest.company}</span>
+                                                        <span className="hidden md:inline">|</span>
+                                                        <span>{quest.period}</span>
+                                                        {quest.location && <span className="w-full text-[10px] opacity-60 mt-1 break-words">{quest.location}</span>}
+                                                    </p>
+                                                    <ul className="text-[10px] md:text-sm opacity-80 space-y-2 list-none">
+                                                        {quest.points.map((point, pIndex) => (
+                                                            <li key={pIndex} className="flex gap-2">
+                                                                <span className="text-retro-green flex-shrink-0">▶</span>
+                                                                <span className="break-words">{point}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
                                             </PixelBorder>
                                         </div>
                                     )}
                                 </div>
 
                                 {/* Right Side Item */}
-                                <div className={`ml-12 md:ml-0 ${index % 2 !== 0 ? 'md:block' : 'md:invisible hidden md:block'}`}>
+                                <div className={`ml-8 md:ml-0 ${index % 2 !== 0 ? 'block' : 'hidden md:block md:invisible'}`}>
                                     {index % 2 !== 0 && (
                                         <div className="text-left">
-                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:min-w-[400px]">
-                                                <h3 className="text-lg font-bold text-retro-green mb-1">{quest.title}</h3>
-                                                <p className="text-sm text-retro-yellow mb-2">
-                                                    {quest.company} | {quest.period}
-                                                    {quest.location && <span className="block text-[10px] opacity-60 mt-1">{quest.location}</span>}
-                                                </p>
-                                                <ul className="text-[10px] md:text-sm opacity-80 space-y-2 list-none">
-                                                    {quest.points.map((point, pIndex) => (
-                                                        <li key={pIndex} className="flex gap-2">
-                                                            <span className="text-retro-green flex-shrink-0">▶</span>
-                                                            <span>{point}</span>
-                                                        </li>
-                                                    ))}
-                                                </ul>
+                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:max-w-[500px]">
+                                                <div className="p-4 md:p-6">
+                                                    <h3 className="text-sm md:text-lg font-bold text-retro-green mb-1 break-all">{quest.title}</h3>
+                                                    <p className="text-[10px] md:text-sm text-retro-yellow mb-2 break-all flex flex-wrap gap-x-2">
+                                                        <span>{quest.company}</span>
+                                                        <span className="hidden md:inline">|</span>
+                                                        <span>{quest.period}</span>
+                                                        {quest.location && <span className="w-full text-[10px] opacity-60 mt-1 break-words">{quest.location}</span>}
+                                                    </p>
+                                                    <ul className="text-[10px] md:text-sm opacity-80 space-y-2 list-none">
+                                                        {quest.points.map((point, pIndex) => (
+                                                            <li key={pIndex} className="flex gap-2">
+                                                                <span className="text-retro-green flex-shrink-0">▶</span>
+                                                                <span className="break-words">{point}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
                                             </PixelBorder>
                                         </div>
                                     )}
                                 </div>
-
-                                {/* Mobile view for odd items */}
-                                {index % 2 !== 0 && (
-                                    <div className="md:hidden ml-12 -mt-8">
-                                        <PixelBorder variant="green" className="bg-retro-black/40 w-full">
-                                            <h3 className="text-lg font-bold text-retro-green mb-1">{quest.title}</h3>
-                                            <p className="text-sm text-retro-yellow mb-2">{quest.company} | {quest.period}</p>
-                                            <ul className="text-[10px] md:text-sm opacity-80 space-y-2 list-none">
-                                                {quest.points.map((point, pIndex) => (
-                                                    <li key={pIndex} className="flex gap-2">
-                                                        <span className="text-retro-green flex-shrink-0">▶</span>
-                                                        <span>{point}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </PixelBorder>
-                                    </div>
-                                )}
                             </div>
                         </div>
                     ))}

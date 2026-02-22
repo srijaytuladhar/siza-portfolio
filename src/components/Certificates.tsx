@@ -15,13 +15,13 @@ const Certificates = () => {
     return (
         <section id="certificates" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl mb-12 text-center text-white">&lt;ACHIEVEMENTS_UNLOCKED /&gt;</h2>
+                <h2 className="text-[14px] sm:text-3xl mb-12 text-center text-white break-all">&lt;ACHIEVEMENTS_UNLOCKED /&gt;</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {certs.map((cert, index) => (
                         <div key={index} className="group transition-transform duration-300 hover:-translate-y-4">
                             <PixelBorder className="h-full flex flex-col items-center justify-center text-center bg-retro-black/60 group-hover:bg-retro-black shadow-lg p-6">
                                 <Award size={32} className="mb-4 text-retro-yellow flex-shrink-0" />
-                                <h3 className="text-xs md:text-sm font-bold mb-2 group-hover:text-retro-green transition-colors break-words w-full leading-tight">
+                                <h3 className="text-[10px] md:text-sm font-bold mb-2 group-hover:text-retro-green transition-colors break-all w-full leading-tight">
                                     {cert.title}
                                 </h3>
                                 <p className="text-[10px] md:text-xs opacity-60 uppercase break-words w-full">
