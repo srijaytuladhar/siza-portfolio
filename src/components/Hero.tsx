@@ -1,0 +1,49 @@
+"use client";
+
+import React from 'react';
+import Image from 'next/image';
+import PixelBorder from './PixelBorder';
+import RetroButton from './RetroButton';
+
+const Hero = () => {
+    return (
+        <section id="hero" className="py-20 px-4">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+                <div className="flex-1 flex justify-center">
+                    <div className="relative w-64 h-64 md:w-80 md:h-80">
+                        <PixelBorder variant="white" className="p-0 overflow-hidden w-full h-full">
+                            <Image
+                                src="/profile.png"
+                                alt="Profile"
+                                fill
+                                className="object-cover"
+                                priority
+                            />
+                        </PixelBorder>
+                    </div>
+                </div>
+                <div className="flex-1 text-center md:text-left">
+                    <h1 className="text-3xl md:text-4xl mb-6 text-retro-green">
+                        &gt; HELLO_WORLD!
+                    </h1>
+                    <div className="h-16 mb-8 transform-none">
+                        <span className="typewriter text-xl md:text-2xl inline-block">
+                            FULL_STACK_DEVELOPER
+                        </span>
+                    </div>
+                    <p className="text-lg mb-8 leading-relaxed opacity-80">
+                        I'M A SOFTWARE ENGINEER WITH 5 YEARS OF EXPERIENCE IN BUILDING
+                        HIGH-PERFORMANCE APPLICATIONS. LEVEL 99 IN JAVASCRIPT & TYPESCRIPT.
+                        PASSIONATE ABOUT PIXELS AND PERFORMANCE.
+                    </p>
+                    <div className="flex flex-wrap justify-center md:justify-start gap-4">
+                        <RetroButton variant="green">VIEW_STATS</RetroButton>
+                        <RetroButton variant="yellow">START_QUEST</RetroButton>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Hero;

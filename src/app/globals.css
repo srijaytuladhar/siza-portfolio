@@ -1,26 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0c0c0c;
+  --foreground: #ffffff;
+  --retro-green: #39FF14;
+  --retro-yellow: #FFFF00;
+  --font-retro: 'Press Start 2P', system-ui, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-retro-green: var(--retro-green);
+  --color-retro-yellow: var(--retro-yellow);
+  --font-retro: var(--font-retro);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-retro);
+  image-rendering: pixelated;
+  overflow-x: hidden;
+}
+
+/* Custom Pixel Border Utilities */
+.pixel-border {
+  position: relative;
+  border: 4px solid white;
+  box-shadow:
+    0 -4px 0 0 white,
+    0 4px 0 0 white,
+    -4px 0 0 0 white,
+    4px 0 0 0 white;
+}
+
+.pixel-border-green {
+  border-color: var(--retro-green);
+  box-shadow:
+    0 -4px 0 0 var(--retro-green),
+    0 4px 0 0 var(--retro-green),
+    -4px 0 0 0 var(--retro-green),
+    4px 0 0 0 var(--retro-green);
+}
+
+.pixel-border-yellow {
+  border-color: var(--retro-yellow);
+  box-shadow:
+    0 -4px 0 0 var(--retro-yellow),
+    0 4px 0 0 var(--retro-yellow),
+    -4px 0 0 0 var(--retro-yellow),
+    4px 0 0 0 var(--retro-yellow);
+}
+
+/* CRT Scanline Effect */
+.scanline {
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: linear-gradient(to bottom,
+      rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 4px;
+  position: fixed;
+  pointer-events: none;
+}
+
+.scanline::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(18, 16, 16, 0.1);
+  opacity: 0;
+  z-index: 51;
+  pointer-events: none;
+  animation: flicker 0.15s infinite;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
+  }
+
+  5% {
+    opacity: 0.34769;
+  }
+
+  10% {
+    opacity: 0.23604;
+  }
+
+  15% {
+    opacity: 0.90626;
+  }
+
+  20% {
+    opacity: 0.18128;
+  }
+
+  25% {
+    opacity: 0.83891;
+  }
+
+  30% {
+    opacity: 0.65583;
+  }
+
+  35% {
+    opacity: 0.67807;
+  }
+
+  40% {
+    opacity: 0.26559;
+  }
+
+  45% {
+    opacity: 0.84693;
+  }
+
+  50% {
+    opacity: 0.96019;
+  }
+
+  55% {
+    opacity: 0.08594;
+  }
+
+  60% {
+    opacity: 0.20313;
+  }
+
+  65% {
+    opacity: 0.71988;
+  }
+
+  70% {
+    opacity: 0.53455;
+  }
+
+  75% {
+    opacity: 0.37268;
+  }
+
+  80% {
+    opacity: 0.44274;
+  }
+
+  85% {
+    opacity: 0.26601;
+  }
+
+  90% {
+    opacity: 0.11035;
+  }
+
+  95% {
+    opacity: 0.69576;
+  }
+
+  100% {
+    opacity: 0.42576;
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: .15em solid var(--retro-green);
+  white-space: nowrap;
+  letter-spacing: .15em;
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: var(--retro-green);
+  }
 }
