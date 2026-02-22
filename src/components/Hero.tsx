@@ -18,7 +18,7 @@ const Hero = () => {
                                     src="/profile-8bit-v4.png"
                                     alt="Profile 8-bit"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover object-center"
                                     priority
                                 />
                             </div>
@@ -28,10 +28,15 @@ const Hero = () => {
                                     src="/profile-real.jpg"
                                     alt="Profile Real"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover object-[50%_20%] scale-105"
                                 />
                             </div>
                         </PixelBorder>
+                        <div className="absolute -bottom-14 left-0 w-full text-center">
+                            <p className="text-[10px] md:text-xs text-retro-yellow animate-pulse font-retro mt-4">
+                                [ HOVER TO SEE THE HANDSOME IN REAL WORLD ]
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className="flex-1 text-center md:text-left">
