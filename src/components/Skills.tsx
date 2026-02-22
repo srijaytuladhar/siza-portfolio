@@ -7,35 +7,44 @@ const Skills = () => {
         {
             title: 'FRONTEND',
             icon: <Globe className="text-retro-green" />,
-            skills: ['React', 'Next.js', 'Tailwind', 'TypeScript', 'Redux']
+            skills: ['AngularJS', 'React', 'Next.js', 'TypeScript', 'Tailwind CSS']
         },
         {
             title: 'BACKEND',
             icon: <Server className="text-retro-yellow" />,
-            skills: ['Node.js', 'Express', 'PostgreSQL', 'MongoDB', 'GraphQL']
+            skills: ['Java', 'Spring Boot', 'Node.js', 'Microservices', 'RESTful APIs', 'Apache Kafka', 'Redis', 'PostgreSQL / MySQL / NoSQL']
         },
         {
             title: 'TOOLS',
             icon: <Wrench className="text-white" />,
-            skills: ['Git', 'Docker', 'AWS', 'Jest', 'Vite']
+            skills: ['Kubernetes', 'Docker', 'Jenkins (CI/CD)', 'High-Availability', 'Distributed Arch', 'Secure Payments', 'SSL/TLS', 'Tokenization']
+        },
+        {
+            title: 'SOFT_SKILLS',
+            icon: <Terminal className="text-retro-green" />,
+            skills: ['Problem Solving', 'Team Leadership', 'Mentoring', 'Agile/Scrum', 'Communication', 'Collaboration', 'Adaptability', 'Analytical Thinking']
         }
     ];
 
     return (
         <section id="skills" className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 <h2 className="text-3xl mb-12 text-center text-retro-yellow">&lt;SKILL_TREE /&gt;</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     {skillGroups.map((group, index) => (
-                        <PixelBorder key={index} className="bg-retro-black/50 hover:bg-retro-black transition-colors" variant={index === 0 ? 'green' : index === 1 ? 'yellow' : 'white'}>
+                        <PixelBorder
+                            key={index}
+                            className="bg-retro-black/50 hover:bg-retro-black transition-colors h-full"
+                            variant={index % 3 === 0 ? 'green' : index % 3 === 1 ? 'yellow' : 'white'}
+                        >
                             <div className="flex items-center gap-4 mb-6">
                                 {group.icon}
-                                <h3 className="text-xl font-bold">{group.title}</h3>
+                                <h3 className="text-xl font-bold tracking-tight">{group.title}</h3>
                             </div>
-                            <ul className="space-y-4">
+                            <ul className="space-y-3">
                                 {group.skills.map((skill, sIndex) => (
-                                    <li key={sIndex} className="flex items-center gap-2">
-                                        <span className="text-retro-green">▶</span> {skill}
+                                    <li key={sIndex} className="flex items-start gap-2 text-sm leading-tight">
+                                        <span className="text-retro-green mt-1">▶</span> {skill}
                                     </li>
                                 ))}
                             </ul>
