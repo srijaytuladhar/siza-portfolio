@@ -15,7 +15,7 @@ const Hero = () => {
                             {/* 8-bit Avatar (Default) */}
                             <div className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0 z-10">
                                 <Image
-                                    src="/profile-8bit.png"
+                                    src="/profile-8bit-v2.png"
                                     alt="Profile 8-bit"
                                     fill
                                     className="object-cover"
