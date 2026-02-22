@@ -170,7 +170,7 @@ body {
 
 .typewriter {
   overflow: hidden;
-  border-right: .15em solid var(--retro-green);
+  border-right: .3em solid var(--retro-green);
   white-space: nowrap;
   letter-spacing: .15em;
   animation:
