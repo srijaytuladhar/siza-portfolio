@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
 import PixelBorder from './PixelBorder';
 
 const Education = () => {
@@ -30,7 +30,7 @@ const Education = () => {
                         <div key={index} className="relative mb-16">
                             {/* Icon on the line */}
                             <div className="absolute left-4 md:left-1/2 top-0 -translate-x-1/2 z-10 bg-retro-black py-1">
-                                <Star className="text-retro-yellow fill-retro-yellow" size={24} />
+                                <GraduationCap className="text-retro-yellow fill-retro-yellow" size={24} />
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">

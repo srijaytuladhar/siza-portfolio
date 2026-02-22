@@ -34,7 +34,7 @@ const Hero = () => {
                         </PixelBorder>
                         <div className="absolute -bottom-14 left-0 w-full text-center">
                             <p className="text-[10px] md:text-xs text-retro-yellow animate-pulse font-retro mt-4">
-                                [ HOVER TO SEE THE HANDSOME IN REAL WORLD ]
+                                HOVER TO SEE THE HANDSOME IN REAL WORLD
                             </p>
                         </div>
                     </div>
@@ -49,9 +49,7 @@ const Hero = () => {
                         </span>
                     </div>
                     <p className="text-lg mb-8 leading-relaxed opacity-80">
-                        I'M A SOFTWARE ENGINEER WITH 5 YEARS OF EXPERIENCE IN BUILDING
-                        HIGH-PERFORMANCE APPLICATIONS. LEVEL 99 IN JAVASCRIPT & TYPESCRIPT.
-                        PASSIONATE ABOUT PIXELS AND PERFORMANCE.
+                        SENIOR BACKEND ENGINEER WITH 5+ YEARS’ EXPERIENCE BUILDING SCALABLE, CLOUD-NATIVE DIGITAL PAYMENT SYSTEMS. STRONG IN JAVA, SPRING BOOT, MICROSERVICES, KUBERNETES, AND DISTRIBUTED ARCHITECTURES, WITH EXPERTISE IN HIGH-AVAILABILITY FINTECH PLATFORMS AND PRODUCTION-GRADE API DEVELOPMENT.
                     </p>
                     <div className="flex flex-wrap justify-center md:justify-start gap-4">
                         <RetroButton variant="green">VIEW_STATS</RetroButton>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 import PixelBorder from './PixelBorder';
 
 const Experience = () => {
@@ -11,9 +11,9 @@ const Experience = () => {
             location: 'PULCHOWK, LALITPUR, NEPAL',
             points: [
                 'LED DEVELOPMENT OF FULL-STACK SOLUTIONS USING JAVA, SPRING BOOT, ANGULAR, AND KUBERNETES.',
-                'REDUCED DEPLOYMENT TIME BY ~40% BY IMPROVING CI/CD PIPELINES AND CONTAINERISATION WORKFLOWS.',
+                'REDUCED DEPLOYMENT TIME BY 40% BY IMPROVING CI/CD PIPELINES AND CONTAINERISATION WORKFLOWS.',
                 'DESIGNED MICROSERVICES ARCHITECTURE WITH KAFKA AND REDIS, SUPPORTING 10,000+ CONCURRENT TRANSACTIONS WITH 99.9% UPTIME.',
-                'REFACTORED LEGACY SYSTEMS, REDUCING PRODUCTION BUGS BY ~30% AND IMPROVING API RESPONSE TIMES.',
+                'REFACTORED LEGACY SYSTEMS, REDUCING PRODUCTION BUGS BY 30% AND IMPROVING API RESPONSE TIMES.',
                 'RESOLVED CRITICAL PRODUCTION INCIDENTS IN REAL TIME TO MAINTAIN HIGH AVAILABILITY FOR A RAPIDLY GROWING USER BASE.',
                 'MENTORED JUNIOR ENGINEERS AND PROMOTED KNOWLEDGE-SHARING TO IMPROVE OVERALL TEAM VELOCITY.'
             ]
@@ -26,8 +26,8 @@ const Experience = () => {
                 'SPEARHEADED INTEGRATION OF CROSS-BORDER PAYMENTS AND UPI (UNIFIED PAYMENTS INTERFACE) IN NEPAL.',
                 'ENABLED PROCESSING OF $240,000+ IN MONTHLY TRANSACTION VOLUME WITHIN THE FIRST YEAR.',
                 'DESIGNED AND IMPLEMENTED DIGITAL PAYMENT SOLUTIONS INCLUDING QR PAYMENTS AND IBFT.',
-                'INCREASED DAILY TRANSACTION THROUGHPUT BY ~25% THROUGH SYSTEM AND PROCESS OPTIMISATION.',
-                'COLLABORATED WITH BUSINESS AND COMPLIANCE TEAMS TO REDUCE TRANSACTION FAILURE RATES BY ~15%.',
+                'INCREASED DAILY TRANSACTION THROUGHPUT BY 25% THROUGH SYSTEM AND PROCESS OPTIMISATION.',
+                'COLLABORATED WITH BUSINESS AND COMPLIANCE TEAMS TO REDUCE TRANSACTION FAILURE RATES BY 15%.',
                 'INTEGRATED REST APIS COMPLIANT WITH NEPAL RASTRA BANK REGULATORY STANDARDS.',
                 'IMPROVED PLATFORM SECURITY USING SSL/TLS ENCRYPTION AND TOKENISATION FOR SENSITIVE PAYMENT DATA.'
             ]
@@ -57,7 +57,7 @@ const Experience = () => {
                         <div key={index} className="relative mb-16">
                             {/* Icon on the line */}
                             <div className="absolute left-4 md:left-1/2 top-0 -translate-x-1/2 z-10 bg-retro-black py-1">
-                                <Heart className="text-retro-green fill-retro-green" size={24} />
+                                <Briefcase className="text-retro-green fill-retro-green" size={24} />
                             </div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-24">

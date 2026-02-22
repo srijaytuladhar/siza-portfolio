@@ -15,10 +15,8 @@ const Footer = () => {
                                 WANT TO TEAM UP FOR A NEW QUEST? DROP A MESSAGE BELOW!"
                             </p>
                             <div className="flex gap-6 justify-center md:justify-start">
-                                <a href="#" className="hover:text-retro-yellow transition-transform hover:-translate-y-1"><Github size={32} /></a>
-                                <a href="#" className="hover:text-retro-yellow transition-transform hover:-translate-y-1"><Linkedin size={32} /></a>
-                                <a href="#" className="hover:text-retro-yellow transition-transform hover:-translate-y-1"><Twitter size={32} /></a>
-                                <a href="#" className="hover:text-retro-yellow transition-transform hover:-translate-y-1"><Mail size={32} /></a>
+                                <a href="https://github.com/srijaytuladhar" target="_blank" rel="noopener noreferrer" className="text-white hover:text-retro-yellow transition-transform hover:-translate-y-1"><Github size={32} /></a>
+                                <a href="https://www.linkedin.com/in/srijaytuladhar/" target="_blank" rel="noopener noreferrer" className="text-[#0077b5] hover:text-retro-yellow transition-transform hover:-translate-y-1"><Linkedin size={32} /></a>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -39,7 +37,7 @@ const Footer = () => {
                     </div>
                 </PixelBorder>
                 <p className="text-center mt-12 text-xs opacity-50">
-                    © 2024 SIZA_PORTFOLIO. INSERT COIN TO CONTINUE.
+                    © 2026 SRIJAY PORTFOLIO | INSERT COIN TO CONTINUE.
                 </p>
             </div>
         </footer>

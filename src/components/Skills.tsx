@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Database, Wrench, Globe, Server, Terminal } from 'lucide-react';
+import { Code2, Database, Wrench, Globe, Server, Users } from 'lucide-react';
 import PixelBorder from './PixelBorder';
 
 const Skills = () => {
@@ -21,7 +21,7 @@ const Skills = () => {
         },
         {
             title: 'SOFT_SKILLS',
-            icon: <Terminal className="text-retro-green" />,
+            icon: <Users className="text-retro-green" />,
             skills: ['Problem Solving', 'Team Leadership', 'Mentoring', 'Agile/Scrum', 'Communication', 'Collaboration', 'Adaptability', 'Analytical Thinking']
         }
     ];
