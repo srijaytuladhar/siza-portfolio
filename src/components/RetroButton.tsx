@@ -17,7 +17,7 @@ const RetroButton = ({
     ...props
 }: RetroButtonProps) => {
     const variantClass = variant === 'green' ? 'pixel-border-green' : 'pixel-border-yellow';
-    const hoverClass = variant === 'green' ? 'hover:bg-retro-green hover:text-black' : 'hover:bg-retro-yellow hover:text-black';
+    const hoverClass = variant === 'green' ? 'hover:bg-retro-green hover:text-white' : 'hover:bg-retro-yellow hover:text-white';
 
     return (
         <button

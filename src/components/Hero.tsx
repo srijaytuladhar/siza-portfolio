@@ -11,7 +11,7 @@ const Hero = () => {
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
                 <div className="flex-1 flex justify-center w-full">
                     <div className="relative w-56 h-56 md:w-80 md:h-80">
-                        <PixelBorder variant="white" className="p-0 overflow-hidden w-full h-full group cursor-pointer">
+                        <PixelBorder variant="white" className="p-0 overflow-hidden w-full h-full group cursor-pointer border-foreground shadow-[4px_4px_0_0_rgba(0,0,0,1)]">
                             {/* 8-bit Avatar (Default) */}
                             <div className="absolute inset-0 transition-opacity duration-500 group-hover:opacity-0 z-10">
                                 <Image

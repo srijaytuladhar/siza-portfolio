@@ -2,16 +2,33 @@
 @import "tailwindcss";
 
 :root {
+  /* Light Theme (Default) */
+  --background: #f8f9fa;
+  --foreground: #1a1a1a;
+  --retro-black: #ffffff;
+  --retro-green: #00a800;
+  --retro-yellow: #b8860b;
+  --font-retro: 'Press Start 2P', system-ui, sans-serif;
+  --scanline-color: rgba(0, 0, 0, 0.05);
+  --flicker-color: rgba(0, 0, 0, 0.02);
+}
+
+[data-theme='dark'] {
+  /* Dark Theme */
   --background: #0c0c0c;
   --foreground: #ffffff;
+  --retro-black: #1a1a1a;
+  /* Darker card bg */
   --retro-green: #39FF14;
   --retro-yellow: #FFFF00;
-  --font-retro: 'Press Start 2P', system-ui, sans-serif;
+  --scanline-color: rgba(0, 0, 0, 0.25);
+  --flicker-color: rgba(18, 16, 16, 0.1);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-retro-black: var(--retro-black);
   --color-retro-green: var(--retro-green);
   --color-retro-yellow: var(--retro-yellow);
   --font-retro: var(--font-retro);
@@ -37,12 +54,22 @@ body {
 /* Custom Pixel Border Utilities */
 .pixel-border {
   position: relative;
-  border: 4px solid white;
+  border: 4px solid var(--foreground);
   box-shadow:
-    0 -4px 0 0 white,
-    0 4px 0 0 white,
-    -4px 0 0 0 white,
-    4px 0 0 0 white;
+    0 -4px 0 0 var(--foreground),
+    0 4px 0 0 var(--foreground),
+    -4px 0 0 0 var(--foreground),
+    4px 0 0 0 var(--foreground);
+}
+
+.pixel-border-slim {
+  position: relative;
+  border: 2px solid var(--foreground);
+  box-shadow:
+    0 -2px 0 0 var(--foreground),
+    0 2px 0 0 var(--foreground),
+    -2px 0 0 0 var(--foreground),
+    2px 0 0 0 var(--foreground);
 }
 
 .pixel-border-green {
@@ -69,8 +96,8 @@ body {
   height: 100%;
   z-index: 50;
   background: linear-gradient(to bottom,
-      rgba(18, 16, 16, 0) 50%,
-      rgba(0, 0, 0, 0.25) 50%);
+      rgba(0, 0, 0, 0) 50%,
+      var(--scanline-color) 50%);
   background-size: 100% 4px;
   position: fixed;
   pointer-events: none;
@@ -84,7 +111,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(18, 16, 16, 0.1);
+  background: var(--flicker-color);
   opacity: 0;
   z-index: 51;
   pointer-events: none;

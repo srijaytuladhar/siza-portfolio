@@ -16,7 +16,7 @@ const Skills = () => {
         },
         {
             title: 'TOOLS',
-            icon: <Wrench className="text-white" />,
+            icon: <Wrench className="text-foreground" />,
             skills: ['Kubernetes', 'Docker', 'Jenkins (CI/CD)', 'High-Availability', 'Distributed Arch', 'Secure Payments', 'SSL/TLS', 'Tokenization']
         },
         {

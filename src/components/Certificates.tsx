@@ -15,7 +15,7 @@ const Certificates = () => {
     return (
         <section id="certificates" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-                <h2 className="text-[14px] sm:text-3xl mb-12 text-center text-white break-all">&lt;ACHIEVEMENTS_UNLOCKED /&gt;</h2>
+                <h2 className="text-[14px] sm:text-3xl mb-12 text-center text-foreground break-all">&lt;ACHIEVEMENTS_UNLOCKED /&gt;</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {certs.map((cert, index) => (
                         <div key={index} className="group transition-transform duration-300 hover:-translate-y-4">
