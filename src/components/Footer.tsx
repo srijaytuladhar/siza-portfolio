@@ -16,8 +16,8 @@ const Footer = () => {
                                     WANT TO TEAM UP FOR A NEW QUEST? DROP A MESSAGE BELOW!"
                                 </p>
                                 <div className="flex gap-6 justify-center md:justify-start">
-                                    <a href="https://github.com/srijaytuladhar" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-retro-yellow transition-transform hover:-translate-y-1"><Github size={32} /></a>
-                                    <a href="https://www.linkedin.com/in/srijaytuladhar/" target="_blank" rel="noopener noreferrer" className="text-[#0077b5] hover:text-retro-yellow transition-transform hover:-translate-y-1"><Linkedin size={32} /></a>
+                                    <a href="https://github.com/srijaytuladhar" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-retro-yellow transition-transform hover:-translate-y-1"><Github size={60} /></a>
+                                    <a href="https://www.linkedin.com/in/srijaytuladhar/" target="_blank" rel="noopener noreferrer" className="text-[#0077b5] hover:text-retro-yellow transition-transform hover:-translate-y-1"><Linkedin size={60} /></a>
                                 </div>
                             </div>
                             <div className="w-full md:w-1/2">

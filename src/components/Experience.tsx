@@ -5,8 +5,8 @@ import PixelBorder from './PixelBorder';
 const Experience = () => {
     const quests = [
         {
-            title: 'SR_FULL_STACK_ENGINEER',
-            company: 'FONEPAY_PAYMENT_SERVICE_LTD',
+            title: 'FULL STACK ENGINEER',
+            company: 'FONEPAY PAYMENT SERVICE LTD',
             period: 'OCT 2023 – PRESENT',
             location: 'PULCHOWK, LALITPUR, NEPAL',
             points: [
@@ -47,7 +47,7 @@ const Experience = () => {
 
     return (
         <section id="experience" className="py-20 px-4">
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-7xl mx-auto">
                 <h2 className="text-xl sm:text-3xl mb-12 text-center text-retro-green break-all">&lt;EXPERIENCE /&gt;</h2>
                 <div className="relative">
                     {/* Vertical Center Line (Desktop) / Left Line (Mobile) */}
@@ -65,7 +65,7 @@ const Experience = () => {
                                 <div className={`ml-8 md:ml-0 ${index % 2 === 0 ? 'block' : 'hidden md:block md:invisible'}`}>
                                     {index % 2 === 0 && (
                                         <div className="md:text-right">
-                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:max-w-[500px]">
+                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:max-w-[600px]">
                                                 <div className="p-4 md:p-6">
                                                     <h3 className="text-sm md:text-lg font-bold text-retro-green mb-1 break-all">{quest.title}</h3>
                                                     <p className="text-[10px] md:text-sm text-retro-yellow mb-2 break-all flex flex-wrap gap-x-2">
@@ -92,7 +92,7 @@ const Experience = () => {
                                 <div className={`ml-8 md:ml-0 ${index % 2 !== 0 ? 'block' : 'hidden md:block md:invisible'}`}>
                                     {index % 2 !== 0 && (
                                         <div className="text-left">
-                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:max-w-[500px]">
+                                            <PixelBorder variant="green" className="bg-retro-black/40 inline-block text-left w-full md:w-auto md:max-w-[600px]">
                                                 <div className="p-4 md:p-6">
                                                     <h3 className="text-sm md:text-lg font-bold text-retro-green mb-1 break-all">{quest.title}</h3>
                                                     <p className="text-[10px] md:text-sm text-retro-yellow mb-2 break-all flex flex-wrap gap-x-2">
