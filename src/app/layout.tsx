@@ -16,8 +16,36 @@ const geistMono = Geist_Mono({
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "SRIJAY PORTFOLIO",
-  description: "Senior Backend Engineer Portfolio",
+  title: "Srijay Tuladhar | Senior Backend Engineer Portfolio",
+  description: "Official portfolio of Srijay Tuladhar, a Senior Backend Engineer. Showcasing expertise in backend development, scalable architecture, and technical leadership.",
+  alternates: {
+    canonical: "https://srijaytuladhar.com.np",
+  },
+  openGraph: {
+    title: "Srijay Tuladhar | Senior Backend Engineer Portfolio",
+    description: "Official portfolio of Srijay Tuladhar, a Senior Backend Engineer specializing in scalable architecture and technical leadership.",
+    url: "https://srijaytuladhar.com.np",
+    siteName: "Srijay Tuladhar Portfolio",
+    images: [
+      {
+        url: "/profile-8bit-v4.png",
+        width: 1200,
+        height: 630,
+        alt: "Srijay Tuladhar - Senior Backend Engineer",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Srijay Tuladhar | Senior Backend Engineer Portfolio",
+    description: "Official portfolio of Srijay Tuladhar, a Senior Backend Engineer specializing in scalable architecture.",
+    images: ["/profile-8bit-v4.png"],
+  },
+  other: {
+    "og:updated_time": new Date().toISOString(),
+  },
 };
 
 export default function RootLayout({

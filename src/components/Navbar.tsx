@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="flex items-center gap-4 w-full md:w-auto justify-between">
                     <Link href="/" onClick={triggerGlitch} className="text-retro-green text-lg md:text-xl font-bold tracking-tighter whitespace-nowrap">
-                        &lt;SRIJAY PORTFOLIO /&gt;
+                        &lt;SRIJAY TULADHAR /&gt;
                     </Link>
                     <div className="md:hidden">
                         <ThemeToggle />

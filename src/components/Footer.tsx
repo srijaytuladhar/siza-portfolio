@@ -39,7 +39,7 @@ const Footer = () => {
                     </div>
                 </PixelBorder>
                 <p className="text-center mt-12 text-[10px] md:text-xs opacity-50 px-4">
-                    © 2026 SRIJAY PORTFOLIO | INSERT COIN TO CONTINUE.
+                    © 2026 SRIJAY TULADHAR | INSERT COIN TO CONTINUE.
                 </p>
             </div>
         </footer>
