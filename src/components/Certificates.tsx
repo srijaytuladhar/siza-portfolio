@@ -109,8 +109,8 @@ const Certificates = () => {
                                 </p>
 
                                 {cert.credentialId && (
-                                    <p className="text-[8px] md:text-[9px] text-foreground/50 font-mono break-all mb-3">
-                                        ID: {cert.credentialId}
+                                    <p className="text-[10px] md:text-xs text-foreground/70 font-mono break-all mb-3 leading-relaxed">
+                                        <span className="text-retro-yellow/90 font-bold">ID:</span> {cert.credentialId}
                                     </p>
                                 )}
 

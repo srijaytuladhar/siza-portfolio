@@ -4,6 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import PixelBorder from './PixelBorder';
 import RetroButton from './RetroButton';
+import { Download } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -52,8 +53,16 @@ const Hero = () => {
                         SENIOR BACKEND ENGINEER WITH 5+ YEARS’ EXPERIENCE BUILDING SCALABLE, CLOUD-NATIVE DIGITAL PAYMENT SYSTEMS. STRONG IN JAVA, SPRING BOOT, MICROSERVICES, KUBERNETES, AND DISTRIBUTED ARCHITECTURES, WITH EXPERTISE IN HIGH-AVAILABILITY FINTECH PLATFORMS AND PRODUCTION-GRADE API DEVELOPMENT.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                        <RetroButton variant="green" className="w-full sm:w-auto">VIEW_STATS</RetroButton>
-                        <RetroButton variant="yellow" className="w-full sm:w-auto">START_QUEST</RetroButton>
+                        <RetroButton
+                            as="a"
+                            href="/Srijay-Tuladhar-CV-2026.pdf"
+                            download="Srijay-Tuladhar-CV-2026.pdf"
+                            variant="green"
+                            className="w-full sm:w-auto m-0 px-8 py-3 text-xs md:text-sm"
+                        >
+                            <Download size={18} className="flex-shrink-0" />
+                            <span>DOWNLOAD_CV</span>
+                        </RetroButton>
                     </div>
                 </div>
             </div>
@@ -62,3 +71,4 @@ const Hero = () => {
 };
 
 export default Hero;
+
